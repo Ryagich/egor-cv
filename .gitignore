@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+.env*
+!.env.example
+.fps3-research/
+.fps3-tree.json
+.yandex-counter-terrorist.html
+reference/

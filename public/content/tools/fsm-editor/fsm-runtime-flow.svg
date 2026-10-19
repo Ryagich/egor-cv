@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">Поток работы графового конечного автомата</title>
+  <desc id="desc">Авторский граф состояний запускается runner-ом конкретного объекта. Runner создаёт контекст с нужными сервисами. StateMachine выполняет поведения текущего состояния и проверяет переходы.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#89948c"/></marker>
+    <style>
+      .label { font: 600 18px Arial, sans-serif; letter-spacing: 2px; fill: #777e7a; }
+      .title { font: 700 29px Arial, sans-serif; fill: #e0e4e1; }
+      .body { font: 400 20px Arial, sans-serif; fill: #a3aaa5; }
+      .code { font: 600 18px Consolas, monospace; fill: #b7c0b9; }
+      .note { font: 400 17px Arial, sans-serif; fill: #8e9690; }
+    </style>
+  </defs>
+  <rect width="1440" height="860" rx="28" fill="#131516"/>
+  <text x="72" y="80" class="label">ПОТОК ДАННЫХ</text>
+  <text x="72" y="122" class="title">Как граф управляет поведением объекта</text>
+  <g>
+    <rect x="72" y="184" width="330" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="108" y="233" class="title">Граф</text><text x="108" y="267" class="title">состояний</text>
+    <text x="108" y="317" class="code">StateMachineGraph</text><text x="108" y="346" class="body">состояния и переходы</text>
+    <rect x="555" y="184" width="330" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="591" y="233" class="title">Runner</text><text x="591" y="267" class="title">объекта</text>
+    <text x="591" y="317" class="body">собирает зависимости</text><text x="591" y="346" class="body">конкретного экземпляра</text>
+    <rect x="1038" y="184" width="330" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="1074" y="233" class="title">Контекст</text><text x="1074" y="267" class="title">автомата</text>
+    <text x="1074" y="317" class="code">StateMachineContext</text><text x="1074" y="346" class="body">сервисы, owner и время</text>
+  </g>
+  <path d="M402 276H543" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M885 276H1026" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="182" y="500" width="320" height="174" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="218" y="549" class="title">Текущее</text><text x="218" y="583" class="title">состояние</text>
+    <text x="218" y="632" class="body">Enter · Logic · Exit</text>
+    <rect x="560" y="500" width="320" height="174" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="596" y="549" class="title">Условия</text><text x="596" y="583" class="title">перехода</text>
+    <text x="596" y="632" class="body">All или Any</text>
+    <rect x="938" y="500" width="320" height="174" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="974" y="549" class="title">Смена</text><text x="974" y="583" class="title">состояния</text>
+    <text x="974" y="632" class="body">действия и новая цель</text>
+  </g>
+  <path d="M1203 368L342 490" fill="none" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M502 587H548" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M880 587H926" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1098 674L342 674" fill="none" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="72" y="754" width="1296" height="56" rx="10" fill="#181b1a" stroke="#424846"/>
+  <text x="96" y="789" class="note">Граф описывает возможные состояния. Каждый запущенный объект хранит собственные контекст, время и текущий State.</text>
+</svg>

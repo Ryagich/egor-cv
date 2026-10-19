@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">Поток работы диалогового графа</title>
+  <desc id="desc">Интерактивный объект открывает диалоговый граф. Контекст хранит текущую сессию. Провайдер ответов читает состояние игрока, интерфейс показывает варианты, сервис исполнения меняет игровые системы. Граф и фразы остаются авторскими ассетами.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#89948c"/></marker>
+    <style>
+      .label { font: 600 18px Arial, sans-serif; letter-spacing: 2px; fill: #777e7a; }
+      .title { font: 700 29px Arial, sans-serif; fill: #e0e4e1; }
+      .body { font: 400 20px Arial, sans-serif; fill: #a3aaa5; }
+      .code { font: 600 18px Consolas, monospace; fill: #b7c0b9; }
+      .note { font: 400 17px Arial, sans-serif; fill: #8e9690; }
+    </style>
+  </defs>
+  <rect width="1440" height="860" rx="28" fill="#131516"/>
+  <text x="72" y="80" class="label">ПОТОК ДАННЫХ</text>
+  <text x="72" y="122" class="title">Как граф становится разговором в игре</text>
+
+  <g>
+    <rect x="72" y="184" width="300" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="108" y="233" class="title">Интерактивный</text><text x="108" y="267" class="title">объект</text>
+    <text x="108" y="317" class="body">Хранит ссылку на</text><text x="108" y="346" class="code">DialogGraph</text>
+
+    <rect x="462" y="184" width="300" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="498" y="233" class="title">Диалоговый</text><text x="498" y="267" class="title">граф</text>
+    <text x="498" y="317" class="code">DialogGraph</text><text x="498" y="346" class="body">и связанные фразы</text>
+
+    <rect x="852" y="184" width="300" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="888" y="233" class="title">Сессия</text><text x="888" y="267" class="title">разговора</text>
+    <text x="888" y="317" class="code">DialogueContext</text><text x="888" y="346" class="body">текущая фраза и режим</text>
+  </g>
+  <path d="M372 276H450" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M762 276H840" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="112" y="500" width="310" height="194" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="148" y="549" class="title">Провайдер</text><text x="148" y="583" class="title">ответов</text>
+    <text x="148" y="631" class="code">DialogueAnswerProvider</text><text x="148" y="662" class="body">вычисляет доступные варианты</text>
+
+    <rect x="566" y="500" width="310" height="194" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="602" y="549" class="title">Интерфейс</text><text x="602" y="583" class="title">диалога</text>
+    <text x="602" y="631" class="body">показывает фразу</text><text x="602" y="662" class="body">и готовый список ответов</text>
+
+    <rect x="1020" y="500" width="330" height="194" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="1056" y="549" class="title">Исполнение</text><text x="1056" y="583" class="title">выбора</text>
+    <text x="1056" y="631" class="code">DialogueAnswerExecutionService</text><text x="1056" y="662" class="body">применяет последствия</text>
+  </g>
+  <path d="M1002 368L265 490" fill="none" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M422 597H554" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M876 597H1008" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="72" y="754" width="1280" height="56" rx="10" fill="#181b1a" stroke="#424846"/>
+    <text x="96" y="789" class="note">DialogGraph и DialogPhrase — авторские ассеты: они описывают возможные ветки. Инвентарь, деньги, квесты и флаги хранят прогресс игрока и мира.</text>
+  </g>
+</svg>

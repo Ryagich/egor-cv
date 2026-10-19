@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">Поток работы квестового графа</title>
+  <desc id="desc">Авторский граф квеста используется контроллером для создания прогресса игрока. Журнал, карта, диалоги и сохранение читают этот прогресс. Граф остаётся неизменяемым контентом.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#89948c"/></marker>
+    <style>
+      .label { font: 600 18px Arial, sans-serif; letter-spacing: 2px; fill: #777e7a; }
+      .title { font: 700 29px Arial, sans-serif; fill: #e0e4e1; }
+      .body { font: 400 20px Arial, sans-serif; fill: #a3aaa5; }
+      .code { font: 600 18px Consolas, monospace; fill: #b7c0b9; }
+      .note { font: 400 17px Arial, sans-serif; fill: #8e9690; }
+    </style>
+  </defs>
+  <rect width="1440" height="860" rx="28" fill="#131516"/>
+  <text x="72" y="80" class="label">ПОТОК ДАННЫХ</text>
+  <text x="72" y="122" class="title">Как граф становится квестом в игре</text>
+  <g>
+    <rect x="72" y="184" width="320" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="108" y="233" class="title">Квестовый</text><text x="108" y="267" class="title">граф</text>
+    <text x="108" y="317" class="code">QuestGraph</text><text x="108" y="346" class="body">узлы и переходы</text>
+    <rect x="560" y="184" width="320" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="596" y="233" class="title">Контроллер</text><text x="596" y="267" class="title">квестов</text>
+    <text x="596" y="317" class="code">QuestController</text><text x="596" y="346" class="body">проверяет и выполняет переходы</text>
+    <rect x="1048" y="184" width="320" height="184" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="1084" y="233" class="title">Прогресс</text><text x="1084" y="267" class="title">игрока</text>
+    <text x="1084" y="317" class="code">QuestProgress</text><text x="1084" y="346" class="body">текущий и завершённые этапы</text>
+  </g>
+  <path d="M392 276H548" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M880 276H1036" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="72" y="500" width="270" height="174" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="108" y="549" class="title">Журнал</text><text x="108" y="598" class="body">цель и история</text>
+    <rect x="426" y="500" width="270" height="174" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="462" y="549" class="title">Карта</text><text x="462" y="598" class="body">маркер цели</text>
+    <rect x="780" y="500" width="270" height="174" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="816" y="549" class="title">Диалоги</text><text x="816" y="598" class="body">условия веток</text>
+    <rect x="1134" y="500" width="234" height="174" rx="12" fill="#1a1d1e" stroke="#424846"/>
+    <text x="1170" y="549" class="title">Сейв</text><text x="1170" y="598" class="body">ID пути</text>
+  </g>
+  <path d="M1208 368L207 490" fill="none" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1208 368L561 490" fill="none" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1208 368L915 490" fill="none" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1208 368V488" fill="none" stroke="#89948c" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="72" y="754" width="1296" height="56" rx="10" fill="#181b1a" stroke="#424846"/>
+  <text x="96" y="789" class="note">QuestGraph и его узлы описывают контент. QuestProgress хранит состояние конкретного прохождения и сохраняется по постоянным идентификаторам.</text>
+</svg>
